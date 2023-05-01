@@ -24,19 +24,21 @@ function loadFileInto(fromFile, whereTo) {
 }
 
 //define a recipe object constructor
-function Recipe(a, b, c, d) {
+function Recipe(a, b, c, d, e) {
 
     //set object properties
     this.name = a;
-    this.ingredientsFile = b; // file naem to the HTML snippet containg this recipe's ingredients list
-    this.directionsFile = c; //file neame to the HTML snippet containg this recipe's directions list 
-    this.imageSource = d; // URL or file name to teh recipe photo
+    this.ingredientsFile = b; // file name to the HTML snippet containing this recipe's ingredients list
+    this.directionsFile = c; //file name to the HTML snippet containing this recipe's directions list 
+    this.descriptionFile = d; //file name to the HTML snippent containing this recipe's description
+    this.imageSource = e; // URL or file name to teh recipe photo
 
     //update the display with the content for this recipe
     this.display = function() {
         document.querySelector("#hero h1").innerHTML = this.name;
         loadFileInto(this.ingredientsFile, "#ing");
         loadFileInto(this.directionsFile, "#dir");
+        loadFileInto(this.descriptionFile, "#des");
         document.querySelector("#hero").style.backgroundImage = "url(" + this.imageSource + ")";
         document.title = "Recipe: " + this.name;
     }// end of .display() method
@@ -57,29 +59,44 @@ function Recipe(a, b, c, d) {
     }// end of .addToNav() method
 }
 
-let shakshuka = new Recipe( "Drake's Shakshuka",
-                            "ingredients.html", 
-                            "directions.html", 
-                            "https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fimages.media-allrecipes.com%2Fuserphotos%2F9055595.jpg&q=60&c=sc&orient=true&poi=auto&h=512");
-
-let tunaSalad = new Recipe( "Barbie's Tuna Salad",
-                            "tunaing.html", 
-                            "tunadir.html", 
+let bLunch = new Recipe( "Barbie's Tuna Salad",
+                            "b/bLunchIng.html", 
+                            "b/bLunchDir.html", 
+                            "b/bLunchDes.html",
                             "https://www.cookingclassy.com/wp-content/uploads/2020/03/tuna-salad-3.jpg");
 
-let cobbler = new Recipe(  "Patricia's Blackberry Cobbler",
-                            "cobblering.html", 
-                            "cobblerdir.html", 
-                            "https://www.cookingmamas.com/wp-content/uploads/2012/03/Blackberry-Cobbler-1024x793.jpg");
+let cLunch = new Recipe( "Colleen's Mac N' Cheese",
+                            "c/cLunchIng.html", 
+                            "c/cLunchDir.html", 
+                            "c/cLunchDes.html",
+                            "https://elnazarov.reclaim.hosting/shelter/clunch.png");
 
+let dLunch = new Recipe(  "Drake's Cucumber Caprese Salad",
+                            "d/dLunchIng.html", 
+                            "d/dLunchDir.html", 
+                            "d/dLunchDes.html",
+                            "https://elnazarov.reclaim.hosting/shelter/dlunch.png");
 
+let eLunch = new Recipe(  "Ernie's Sausage Stuffed Jalepenos",
+                            "e/eLunchIng.html", 
+                            "e/eLunchDir.html", 
+                            "e/eLunchDes.html",
+                            "https://elnazarov.reclaim.hosting/shelter/elunch.png");
+
+let aLunch = new Recipe(  "Aspen's Split Pea Soup",
+                            "a/aLunchIng.html", 
+                            "a/aLunchDir.html", 
+                            "a/aLunchDes.html",
+                            "https://elnazarov.reclaim.hosting/shelter/alunch.png");
 
 // don't do anything until the DOM loads
 document.addEventListener("DOMContentLoaded", function() {
     
-    shakshuka.addToNav();
-    tunaSalad.addToNav();
-    cobbler.addToNav();
+    bLunch.addToNav();
+    cLunch.addToNav();
+    dLunch.addToNav();
+    eLunch.addToNav();
+    aLunch.addToNav();
 
     
 });
