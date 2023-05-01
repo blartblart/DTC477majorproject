@@ -28,7 +28,7 @@ function Recipe(a, b, c, d) {
 
     //set object properties
     this.name = a;
-    this.ingredientsFile = b; // file naem to the HTML snippet containg this recipe's ingredients list
+    this.ingredientsFile = b; // file name to the HTML snippet containg this recipe's ingredients list
     this.directionsFile = c; //file neame to the HTML snippet containg this recipe's directions list 
     this.imageSource = d; // URL or file name to teh recipe photo
 
@@ -68,7 +68,7 @@ let bBreakfast = new Recipe( "Barbie's Overnight Oats",
                             "https://elnazarov.reclaim.hosting/shelter/bbreakfast.png");
 
 let cBreakfast = new Recipe(  "Colleen's Summer Garden Quiche",
-                            "cBreakfastIng.html", 
+                            "c/cBreakfastIng.html", 
                             "cBreakfastDir.html", 
                             "https://elnazarov.reclaim.hosting/shelter/cbreakfast.png");
 
