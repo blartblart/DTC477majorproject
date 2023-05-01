@@ -37,9 +37,9 @@ function Recipe(a, b, c, d, e) {
     //update the display with the content for this recipe
     this.display = function() {
         document.querySelector("#hero h1").innerHTML = this.name;
-        loadFileInto(this.descriptionFile, "#columns #des");
-        loadFileInto(this.ingredientsFile, "#columns #ing");
-        loadFileInto(this.directionsFile, "#columns #dir");
+        loadFileInto(this.descriptionFile, "#des");
+        loadFileInto(this.ingredientsFile, "#ing");
+        loadFileInto(this.directionsFile, "#dir");
         document.querySelector("#hero").style.backgroundImage = "url(" + this.imageSource + ")";
         document.title = "Recipe: " + this.name;
     }// end of .display() method
