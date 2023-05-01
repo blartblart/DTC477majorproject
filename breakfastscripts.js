@@ -58,28 +58,28 @@ function Recipe(a, b, c, d) {
 }
 
 let aBreakfast = new Recipe( "Aspen's Tofu Breakfast Bowl",
-                            "aBreakfastIng.html", 
-                            "aBreakfastDir.html", 
+                            "a/aBreakfastIng.html", 
+                            "a/aBreakfastDir.html", 
                             "https://elnazarov.reclaim.hosting/shelter/abreakfast.png");
 
 let bBreakfast = new Recipe( "Barbie's Overnight Oats",
-                            "bBreakfastIng.html", 
-                            "bBreakfastDir.html", 
+                            "b/bBreakfastIng.html", 
+                            "b/bBreakfastDir.html", 
                             "https://elnazarov.reclaim.hosting/shelter/bbreakfast.png");
 
 let cBreakfast = new Recipe(  "Colleen's Summer Garden Quiche",
-                            "cBreakfastIng.html", 
-                            "cBreakfastDir.html", 
+                            "c/cBreakfastIng.html", 
+                            "c/cBreakfastDir.html", 
                             "https://elnazarov.reclaim.hosting/shelter/cbreakfast.png");
 
 let dBreakfast = new Recipe(  "Drake's Chocolate Banana Crepes",
-                            "dBreakfastIng.html", 
-                            "dBreakfastDir.html", 
+                            "d/dBreakfastIng.html", 
+                            "d/dBreakfastDir.html", 
                             "https://elnazarov.reclaim.hosting/shelter/dbreakfast.png");
 
 let eBreakfast = new Recipe(  "Ernie's Breakfast Kolaches",
-                            "eBreakfastIng.html", 
-                            "eBreakfastDir.html", 
+                            "e/eBreakfastIng.html", 
+                            "e/eBreakfastDir.html", 
                             "https://elnazarov.reclaim.hosting/shelter/ebreakfast.png");
 
 // don't do anything until the DOM loads
