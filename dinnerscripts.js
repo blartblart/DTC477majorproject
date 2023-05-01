@@ -98,5 +98,4 @@ document.addEventListener("DOMContentLoaded", function() {
     aDinner.addToNav();
     bDinner.addToNav();
 
-    
 });
