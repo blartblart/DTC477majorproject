@@ -57,29 +57,39 @@ function Recipe(a, b, c, d) {
     }// end of .addToNav() method
 }
 
-let shakshuka = new Recipe( "Drake's Shakshuka",
-                            "ingredients.html", 
-                            "directions.html", 
-                            "https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fimages.media-allrecipes.com%2Fuserphotos%2F9055595.jpg&q=60&c=sc&orient=true&poi=auto&h=512");
+let aBreakfast = new Recipe( "Aspen's Tofu Breakfast Bowl",
+                            "aBreakfastIng.html", 
+                            "aBreakfastDir.html", 
+                            "https://elnazarov.reclaim.hosting/shelter/abreakfast.png");
 
-let tunaSalad = new Recipe( "Barbie's Tuna Salad",
-                            "tunaing.html", 
-                            "tunadir.html", 
-                            "https://www.cookingclassy.com/wp-content/uploads/2020/03/tuna-salad-3.jpg");
+let bBreakfast = new Recipe( "Barbie's Overnight Oats",
+                            "bBreakfastIng.html", 
+                            "bBreakfastDir.html", 
+                            "https://elnazarov.reclaim.hosting/shelter/bbreakfast.png");
 
-let cobbler = new Recipe(  "Patricia's Blackberry Cobbler",
-                            "cobblering.html", 
-                            "cobblerdir.html", 
-                            "https://www.cookingmamas.com/wp-content/uploads/2012/03/Blackberry-Cobbler-1024x793.jpg");
+let cBreakfast = new Recipe(  "Colleen's Summer Garden Quiche",
+                            "cBreakfastIng.html", 
+                            "cBreakfastDir.html", 
+                            "https://elnazarov.reclaim.hosting/shelter/cbreakfast.png");
 
+let dBreakfast = new Recipe(  "Drake's Chocolate Banana Crepes",
+                            "dBreakfastIng.html", 
+                            "dBreakfastDir.html", 
+                            "https://elnazarov.reclaim.hosting/shelter/dbreakfast.png");
 
+let eBreakfast = new Recipe(  "Ernie's Breakfast Kolaches",
+                            "eBreakfastIng.html", 
+                            "eBreakfastDir.html", 
+                            "https://elnazarov.reclaim.hosting/shelter/ebreakfast.png");
 
 // don't do anything until the DOM loads
 document.addEventListener("DOMContentLoaded", function() {
     
-    shakshuka.addToNav();
-    tunaSalad.addToNav();
-    cobbler.addToNav();
+    aBreakfast.addToNav();
+    bBreakfast.addToNav();
+    cBreakfast.addToNav();
+    dBreakfast.addToNav();
+    eBreakfast.addToNav();
 
     
 });

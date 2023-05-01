@@ -48,6 +48,8 @@
       float: left;
       padding: 10px 20px 0 10px;
   }
+
+
   
   #hero {
     position: relative;
@@ -56,6 +58,7 @@
     /*background-image: url("https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fimages.media-allrecipes.com%2Fuserphotos%2F9055595.jpg&q=60&c=sc&orient=true&poi=auto&h=512");*/
     background-size: cover;
     background-position: center center;
+    padding-top: 30px;
   }
   
   #hero h1 {
