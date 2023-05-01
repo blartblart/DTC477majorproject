@@ -28,17 +28,18 @@ function Recipe(a, b, c, d, e) {
 
     //set object properties
     this.name = a;
-    this.ingredientsFile = b; // file name to the HTML snippet containing this recipe's ingredients list
-    this.directionsFile = c; //file name to the HTML snippet containing this recipe's directions list 
-    this.descriptionFile = d; //file name to the HTML snippent containing this recipe's description
+    this.descriptionFile = b; // file name to the HTML snippet containing this recipe's ingredients list
+    this.ingredientsFile = c; //file name to the HTML snippet containing this recipe's directions list 
+    this.directionsFile = d; //file name to the HTML snippent containing this recipe's description
     this.imageSource = e; // URL or file name to teh recipe photo
+
 
     //update the display with the content for this recipe
     this.display = function() {
         document.querySelector("#hero h1").innerHTML = this.name;
-        loadFileInto(this.ingredientsFile, "#ing");
-        loadFileInto(this.directionsFile, "#dir");
-        loadFileInto(this.descriptionFile, "#des");
+        loadFileInto(this.descriptionFile, "#columns #des");
+        loadFileInto(this.ingredientsFile, "#columns #ing");
+        loadFileInto(this.directionsFile, "#columns #dir");
         document.querySelector("#hero").style.backgroundImage = "url(" + this.imageSource + ")";
         document.title = "Recipe: " + this.name;
     }// end of .display() method
@@ -60,33 +61,33 @@ function Recipe(a, b, c, d, e) {
 }
 
 let dDesert = new Recipe( "Drake's Coffee Jelly",
+                            "d/dDesertDes.html",
                             "d/dDesertIng.html", 
                             "d/dDesertDir.html", 
-                            "d/dDesertDes.html",
                             "https://elnazarov.reclaim.hosting/shelter/ddesert.png");
 
 let eDesert = new Recipe( "Ernie's Raspberry Key-Lime Cheesecake Bites",
+                            "e/eDesertDes.html",
                             "e/eDesertIng.html", 
                             "e/eDesertDir.html", 
-                            "e/eDesertDes.html",
                             "https://elnazarov.reclaim.hosting/shelter/edesert.png");
 
 let aDesert = new Recipe(  "Aspen's Lemon Poppy Scones",
+                            "a/aDesertDes.html",
                             "a/aDesertIng.html", 
                             "a/aDesertDir.html", 
-                            "a/aDesertDes.html",
                             "https://elnazarov.reclaim.hosting/shelter/adesert.png");
 
 let bDesert = new Recipe(  "Barbie's No-Bake Cookies",
+                            "b/bDesertDes.html",
                             "b/bDesertIng.html", 
                             "b/bDesertDir.html", 
-                            "b/bDesertDes.html",
                             "https://elnazarov.reclaim.hosting/shelter/bdesert.png");
 
 let cDesert = new Recipe(  "Colleen's Berry Cobbler",
+                            "c/cDesertDes.html",
                             "c/cDesertIng.html", 
                             "c/cDesertDir.html", 
-                            "c/cDesertDes.html",
                             "https://www.cookingmamas.com/wp-content/uploads/2012/03/Blackberry-Cobbler-1024x793.jpg");
 
 // don't do anything until the DOM loads

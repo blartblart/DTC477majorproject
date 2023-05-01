@@ -28,17 +28,18 @@ function Recipe(a, b, c, d, e) {
 
     //set object properties
     this.name = a;
-    this.ingredientsFile = b; // file name to the HTML snippet containing this recipe's ingredients list
-    this.directionsFile = c; //file name to the HTML snippet containing this recipe's directions list 
-    this.descriptionFile = d; //file name to the HTML snippent containing this recipe's description
+    this.descriptionFile = b; // file name to the HTML snippet containing this recipe's ingredients list
+    this.ingredientsFile = c; //file name to the HTML snippet containing this recipe's directions list 
+    this.directionsFile = d; //file name to the HTML snippent containing this recipe's description
     this.imageSource = e; // URL or file name to teh recipe photo
+ 
 
     //update the display with the content for this recipe
     this.display = function() {
         document.querySelector("#hero h1").innerHTML = this.name;
-        loadFileInto(this.ingredientsFile, "#ing");
-        loadFileInto(this.directionsFile, "#dir");
-        loadFileInto(this.descriptionFile, "#des");
+        loadFileInto(this.descriptionFile, "#columns #des");
+        loadFileInto(this.ingredientsFile, "#columns #ing");
+        loadFileInto(this.directionsFile, "#columns #dir");
         document.querySelector("#hero").style.backgroundImage = "url(" + this.imageSource + ")";
         document.title = "Recipe: " + this.name;
     }// end of .display() method
@@ -60,33 +61,33 @@ function Recipe(a, b, c, d, e) {
 }
 
 let cDinner = new Recipe( "Colleen's Pressure Cooker Pork Chops",
+                            "c/cDinnerDes.html",
                             "c/cDinnerIng.html", 
                             "c/cDinnerDir.html", 
-                            "c/cDinnerDes.html",
                             "https://elnazarov.reclaim.hosting/shelter/cdinner.png");
 
 let dDinner = new Recipe( "Drake's Shakshuka",
+                            "d/dDinnerDes.html",
                             "d/dDinnerIng.html", 
                             "d/dDinnerDir.html", 
-                            "d/dDinnerDes.html",
                             "https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fimages.media-allrecipes.com%2Fuserphotos%2F9055595.jpg&q=60&c=sc&orient=true&poi=auto&h=512%22);");
 
 let eDinner = new Recipe(  "Ernie's Sliders",
+                            "e/eDinnerDes.html",
                             "e/eDinnerIng.html", 
                             "e/eDinnerDir.html", 
-                            "e/eDinnerDes.html",
                             "https://elnazarov.reclaim.hosting/shelter/edinner.png");
 
 let aDinner = new Recipe(  "Aspen's Baked Polenta with Radicchio",
+                            "a/aDinnerDes.html",
                             "a/aDinnerIng.html", 
                             "a/aDinnerDir.html", 
-                            "a/aDinnerDes.html",
                             "https://elnazarov.reclaim.hosting/shelter/adinner.png");
 
 let bDinner = new Recipe(  "Barbie's Beef Stir Fry",
+                            "b/bDinnerDes.html",
                             "b/bDinnerIng.html", 
                             "b/bDinnerDir.html", 
-                            "b/bDinnerDes.html",
                             "https://elnazarov.reclaim.hosting/shelter/bdinner.png");
 
 // don't do anything until the DOM loads
