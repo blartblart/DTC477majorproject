@@ -28,17 +28,17 @@ function Recipe(a, b, c, d, e) {
 
     //set object properties
     this.name = a;
-    this.ingredientsFile = b; // file name to the HTML snippet containing this recipe's ingredients list
-    this.directionsFile = c; //file name to the HTML snippet containing this recipe's directions list 
-    this.descriptionFile = d; //file name to the HTML snippent containing this recipe's description
+    this.descriptionFile = b; // file name to the HTML snippet containing this recipe's ingredients list
+    this.ingredientsFile = c; //file name to the HTML snippet containing this recipe's directions list 
+    this.directionsFile = d; //file name to the HTML snippent containing this recipe's description
     this.imageSource = e; // URL or file name to teh recipe photo
 
     //update the display with the content for this recipe
     this.display = function() {
         document.querySelector("#hero h1").innerHTML = this.name;
-        loadFileInto(this.ingredientsFile, "#ing");
-        loadFileInto(this.directionsFile, "#dir");
-        loadFileInto(this.descriptionFile, "#des");
+        loadFileInto(this.descriptionFile, "#columns #des");
+        loadFileInto(this.ingredientsFile, "#columns #ing");
+        loadFileInto(this.directionsFile, "#columns #dir");
         document.querySelector("#hero").style.backgroundImage = "url(" + this.imageSource + ")";
         document.title = "Recipe: " + this.name;
     }// end of .display() method
@@ -60,9 +60,9 @@ function Recipe(a, b, c, d, e) {
 }
 
 let aBreakfast = new Recipe( "Aspen's Tofu Breakfast Bowl",
+                            "a/aBreakfastDes.html",
                             "a/aBreakfastIng.html", 
                             "a/aBreakfastDir.html", 
-                            "a/aBreakfastDes.html",
                             "https://elnazarov.reclaim.hosting/shelter/abreakfast.png");
 
 let bBreakfast = new Recipe( "Barbie's Overnight Oats",
