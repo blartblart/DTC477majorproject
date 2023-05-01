@@ -68,7 +68,7 @@ let bBreakfast = new Recipe( "Barbie's Overnight Oats",
                             "https://elnazarov.reclaim.hosting/shelter/bbreakfast.png");
 
 let cBreakfast = new Recipe(  "Colleen's Summer Garden Quiche",
-                            "c/cBreakfastIng.html", 
+                            "cBreakfastIng.html", 
                             "cBreakfastDir.html", 
                             "https://elnazarov.reclaim.hosting/shelter/cbreakfast.png");
 
