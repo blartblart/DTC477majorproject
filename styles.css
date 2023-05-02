@@ -30,32 +30,146 @@
     margin-top: 0;
     padding-left: 1em;
   }
+
+  span {
+    font-style: italic;
+  }
+
+  body.breakfast {
+      background-color: #DBDE47;
+  }
+
+  body.lunch {
+      background-color: #80DFBD;
+  }
+
+  body.dinner {
+      background-color: #4B59D6;
+  }
+
+  body.desert {
+      background-color: #b82125;
+  }
+
+
+  /*-----------------------------navbar----------------------------*/
   
   #navbar {
-    position: relative;
+    background-color: white;
+    position: fixed;
     width: 100%;
-    height: 5vh;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    
+  }
+
+  /*.breakfast #navbar{
+    background-color: #DBDE47;    
+    
+  }
+
+  #navbar.lunch{
+    background-color: #80DFBD;    
+    
+  }
+
+  #navbar.dinner {
+    background-color: #4B59D6;    
+    
+  }
+
+  #navbar.desert {
+    background-color: #b82125;    
+    
+  }*/
+  
+  #navbar a {
+    color:  	#000000;
+    font-family: 'Glegoo', serif;
+    text-decoration: none;
+    display: block;
+    padding: 0px 30px;
+    /*margin-top: 10px;*/
+  }
+  
+  #navbar a:hover {
+    background-color: rgba(204, 202, 202, 0.5);
+    color: #535353;
+  }
+
+  #navbar ul li.breakfast a:hover {
+    background-color: #DBDE47;
+    color: #535353;
+  }
+
+  #navbar ul li.lunch a:hover {
+    background-color: #80DFBD;
+    color: #535353;
+  }
+
+  #navbar ul li.dinner a:hover {
+    background-color: #4B59D6;
+    color: #9c9c9c;
+  }
+  #navbar ul li.desert a:hover {
+    background-color: #D6534B;
+    color: #535353;
+  }
+  
+  #navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
     background-color: rgb(255, 255, 255);
   }
-
-  #navbar ul {
-      padding: 0;
-      margin: 0;
-      list-style-type: none;
-  }
-
-  #navbar ul li {
-      float: left;
-      padding: 10px 20px 0 10px;
-  }
-
-
   
+  #navbar li {
+    float: left;
+  }
+  
+  #navbar li li {
+    clear: left;
+    width: 100%;
+  }
+  
+  #navbar ul ul {
+    display: none;
+    position: absolute;
+  }
+  
+  #navbar ul li:hover ul {
+    display: block;
+  }
+  
+  #navbar ul li ul li.breakfast a:hover {
+    background-color: #DBDE47;
+    color: #535353;
+  }
+
+  #navbar ul li ul li.lunch a:hover {
+    background-color: #80DFBD;
+    color: #535353;
+  }
+
+  #navbar ul li ul li.dinner a:hover {
+    background-color: #4B59D6;
+    color: #9c9c9c;
+  }
+
+  #navbar ul li ul li.desert a:hover {
+    background-color: #D6534B;
+    color: #535353;
+  }
+
+
+  /*-----------------------------hero image----------------------------*/
+
   #hero {
     position: relative;
-    height: 30vh;
+    height: 40vh;
     width: 100%;
-    /*background-image: url("https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fimages.media-allrecipes.com%2Fuserphotos%2F9055595.jpg&q=60&c=sc&orient=true&poi=auto&h=512");*/
     background-size: cover;
     background-position: center center;
     padding-top: 30px;
@@ -71,28 +185,106 @@
     color: white;
     text-shadow: 0 0 10px #444;
   }
-  
-  #des {
-    background-color:rgb(255, 255, 255);
+
+
+
+  #homehero {
+    position: relative;
+    height: 80vh;
+    width: 100%;
+    background-image: url("https://elnazarov.reclaim.hosting/shelter/cookbookhero.svg");
+    background-size: cover;
+    background-position: center center;
+    padding-top: 30px;
+  }
+
+
+ #breakfasthero {
+    position: relative;
+    height: 40vh;
+    width: 100%;
+    background-image: url("https://elnazarov.reclaim.hosting/shelter/breakfasthero.svg");
+    background-size: cover;
+    background-position: center center;
+    padding-top: 30px;
+  }
+
+  #lunchhero {
+    position: relative;
+    height: 40vh;
+    width: 100%;
+    background-image: url("https://elnazarov.reclaim.hosting/shelter/lunchhero.svg");
+    background-size: cover;
+    background-position: center center;
+    padding-top: 30px;
+  }
+
+  #dinnerhero {
+    position: relative;
+    height: 40vh;
+    width: 100%;
+    background-image: url("https://elnazarov.reclaim.hosting/shelter/dinnerhero.svg");
+    background-size: cover;
+    background-position: center center;
+    padding-top: 30px;
+  }
+
+  #deserthero {
+    position: relative;
+    height: 40vh;
+    width: 100%;
+    background-image: url("https://elnazarov.reclaim.hosting/shelter/deserthero.svg");
+    background-size: cover;
+    background-position: center center;
+    padding-top: 30px;
   }
   
+
+
+/*-----------------------------content----------------------------*/
+
+  #des {
+    background-color:rgb(255, 255, 255, 40%);
+  
+  }
+
+
+  
   #ing {
-    background-color:rgb(255, 255, 255);
+    background-color:rgb(255, 255, 255, 50%);
+    
   }
   
   #dir {
-    background-color:rgb(255, 255, 255);
+    background-color:rgb(255, 255, 255, 60%);
+    
   }
+
+
+/*-----------------------------text and footer----------------------------*/
   
-  span {
-    font-style: italic;
-  }
-  
+ 
   footer {
     font-size: 12px;
   }
+
+  footer.breakfast {
+    background-color: #DBDE47; 
+  }
+
+  footer.lunch {
+    background-color: #80DFBD
+  }
+
+  footer.dinner {
+    background-color: #4B59D6
+  }
+
+  footer.desert {
+    background-color: #b82125
+  }
   
-  /* responsive design */
+  /* --------------------responsive design--------------------------- */
   
   @media (orientation: landscape) {
   
